@@ -1,0 +1,115 @@
+*********************************************************************
+Abaqus/fromNastran Abaqus 3DEXPERIENCE R2017x
+
+reading bulk data from: C:\Users\saini\Documents\PhD_Local_C\41_MATLAB\abaqus\DYNA_to_Abaqus_tets_with_orient\code\nastran_output\270717_ep2d_mddw12_right_TA_isolated.nastran
+ creating Abaqus input: C:\Users\saini\Documents\PhD_Local_C\41_MATLAB\abaqus\DYNA_to_Abaqus_tets_with_orient\code\nastran_output\270717_ep2d_mddw12_right_TA_isolated.inp
+writing diagnostics to: C:\Users\saini\Documents\PhD_Local_C\41_MATLAB\abaqus\DYNA_to_Abaqus_tets_with_orient\code\nastran_output\270717_ep2d_mddw12_right_TA_isolated.log
+
+ environment variables: fromnastran_wtmass_fixup <not present>
+                      : fromnastran_distribution <not present>
+                      : fromnastran_pbar_zero_reset <not present>
+                      : fromnastran_loadcases <not present>
+                      : fromnastran_surface_based_coupling <not present>
+                      : fromnastran_cquad4 <not present>
+                      : fromnastran_chexa <not present>
+                      : fromnastran_ctetra <not present>
+                      : fromnastran_cbar <not present>
+                      : fromnastran_beam_offset_coupling <not present>
+                      : fromnastran_beam_orientation_vector <not present>
+                      : fromnastran_shell_general_section <not present>
+                      : fromnastran_eigensolver <not present>
+                      : fromnastran_plotel <not present>
+                      : fromnastran_cdh_weld <not present>
+                      : fromnastran_spoint_dof <not present>
+
+command line arguments: wtmass_fixup=ON
+                      : distribution=preservePID
+                      : pbar_zero_reset=1e-20
+                      : loadcases=ON
+                      : surface_based_coupling=ON
+                      : cquad4=S4R
+                      : chexa=C3D8I
+                      : ctetra=C3D10M
+                      : cbar=B31
+                      : beam_offset_coupling=ON
+                      : beam_orientation_vector=ON
+                      : shell_general_section=OFF
+                      : plotel <not present>
+                      : cdh_weld <not present>
+                      : eigensolver <not present>
+                      : spoint_dof <not present, using default=9>
+---------------------------------------------------
+completed first pass through Bulk Data file
+        0 = number of lines in File Management and Executive Control
+        9 = number of lines in Case Control Section
+     4252 = number of lines in Bulk Data Section
+     4261 = total number of lines
+        0 = number of lines read from 0 include files
+     3388 = number of keywords
+        0 = number of blank lines
+       19 = number of comment lines
+        0 = number of lines with partial comments
+        0 = number of lines truncated at 80 characters
+        0 = number of unrecognized lines written to output file
+           (name = C:/Users/saini/Documents/PhD_Local_C/41_MATLAB/abaqus/DYNA_to_Abaqus_tets_with_orient/code/nastran_output/270717_ep2d_mddw12_right_TA_isolated.log)
+     4241 = number of lines written to scratch file
+           (name = C:/Users/saini/Documents/PhD_Local_C/41_MATLAB/abaqus/DYNA_to_Abaqus_tets_with_orient/code/nastran_output/270717_ep2d_mddw12_right_TA_isolated.tmp) for further processing
+           (        0 from Free Format                  )
+           (        0 from nonstandard Free Format (tokens > 8 characters) )
+           (     2535 from Single Precision Fixed Format)
+           (     1706 from Double Precision Fixed Format)
+---------------------------------------------------
+The following Case Control entities will be processed:
+     keyword   number
+------------   ------
+  BEGIN BULK        1
+---------------------------------------------------
+The following Bulk Data entities will be processed:
+     keyword   number
+------------   ------
+      CTETRA     2534
+     ENDDATA        1
+        GRID      853
+| ---------------------------------------------------------
+| environment_variable / command_line_argument summary:
+| PARAM,WTMASS will be used to adjust structural mass/density
+| *DISTRIBUTION will be used for shell offsets, orientations, and thicknesses
+|  shell elements will be grouped by PSHELL ID
+| Zero PBAR/PBEAM cross sectional parameters will be reset to 1e-20
+| Rigid links will be modeled using surface-based *COUPLING constraints
+| Beam orientations will be modeled using vectors on beam sections
+| Beam offsets will be modeled using rigid couplings and extra nodes
+| PSHELL/PCOMP will default to *SHELL SECTION
+| PLOTELs will not be translated
+| "CDH welds" (isolated CHEXAs with 8 RBE3s) will not be translated to
+|   rigid fasteners
+| CWELDs will be translated to compliant fasteners
+| CQUAD4 elements will be translated to S4R
+| SPOINT DOF 0 will be reset to 9 in DMIG, MPC, CELAS2, and CMASS2 data
+--------------------------------
+... checking syntax for 1706 double precision fixed format data lines
+NOTE: 853 double precision continuation lines followed
+      keywords that did not end with "*"
+---------------------------------------------------
+... completed second pass through Bulk Data file
+NOTE: all 853 GRIDs are in global coordinates
+NOTE: largest node number in Nastran data = 853
+NOTE: largest element number in Nastran data = 2534
+---------------------------------------------------
+Solid Element Inventory:
+   2534 TETRA_4        0 TETRA_10
+      0 PENTA_6        0 PENTA_15
+      0 HEXA_8         0 HEXA_20 
+      0 PYRAM_5        0 PYRAM_13 
+*** wrote     853 NODEs
+---------------------------------------------------
+... completed third pass through Bulk Data file
+---------------------------------------------------
+***WARNING: could not match PID = 1 to any valid PSOLID definition
+*** wrote    2534 C3D4 elements with no properties
+WARNING: 2534 of 2534 solid elements had no properties
+*** wrote    2534 3D SOLID elements in 1 elsets
+*** elset ALL_3DSOLID contains 2534 elements in 1 elsets
+*** wrote    2534 elements to ELSET ALL_MASSIVE_ELEMENTS
+---------------------------------------------------
+WARNING: did not find "SOL=" in Nastran file
