@@ -1,0 +1,58 @@
+$# LS-PrePost command file created by LS-PrePost(R) V4.3.9 - 26May2017 -64bit-Window
+$# Created on Aug-14-2018 (14:34:40)
+open keyword "C:\Users\saini\Documents\PhD_Local_C\41_MATLAB\abaqus\DYNA_to_Abaqus_tets_with_orient\code\mesh_files\040817_ep2d_mddw12_right_TA.k"
+Message 1
+save keywordoutversion 8
+Message 0
+occview wireframe
+wire
+feat
+wire
+f11
+dupnode freedge on
+dupnode freedge off
+genselect target shell
+genselect target shell
+genselect target shell
+genselect target solid
+genselect solid add solid 1244/F2/0 
+genselect solid add solid 910/F3/0 
+genselect solid add solid 2166/F0/0 
+genselect solid add solid 676/F0/0 
+genselect target shell
+genselect target solid
+dupnode freedge on
+dupnode freedge off
+elemedit eldir solid vectors 1 0 0 1 0 0
+f11
+elemedit eldir accept
+f11
+genselect target solid
+genselect target solid
+genselect target solid
+genselect target solid
+redraw
+mesh
+grid
+grid
+edge
+feat
+wire
+noshad
+shad
+hide
+noshad
+wire
+feat
+edge
+perspective
+parallel
+feat
+edge
+wire
+wire
+wire
+feat
+edge
+grid
+edge
